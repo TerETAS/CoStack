@@ -9,7 +9,7 @@
 #define __COSTACK_H__
 
 #include "stdint.h"
-
+#include "./arch/costack_arch_wrapper.h"
 
 typedef  void * csr_sp_t;
 
@@ -18,8 +18,8 @@ typedef  struct costack_t
     csr_sp_t caller_sp;
     csr_sp_t callee_sp;
     void* sp_base;
-    int   (*fun)(void* par);
-    int   rt;
+    uint32_t   (*fun)(void* par);
+    uint32_t   rt;
 
 }costack_t;
 
