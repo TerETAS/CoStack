@@ -20,6 +20,7 @@ typedef  struct costack_t
     void* sp_base;
     uint32_t   (*fun)(void* par);
     uint32_t   rt;
+    void* par;
 
 }costack_t;
 
