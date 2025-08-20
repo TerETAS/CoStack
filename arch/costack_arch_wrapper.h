@@ -7,7 +7,7 @@
 #ifndef __COSTACK_ARCH_WRAPPER_H__
 #define __COSTACK_ARCH_WRAPPER_H__
 
-#include "./cortexm3_4/costack_arch.h"
+#include "./cortexm3/costack_arch.h"
 
 
 
