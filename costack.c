@@ -72,8 +72,11 @@ uint32_t cst_yield(costack_t *task){
 
 uint32_t cst_task_call(costack_t *task){
 
+    uint32_t rt = cst_switch_to_callee(task,NULL);
 
+    //todo check watermark
 
+    return rt;
 }
 
 

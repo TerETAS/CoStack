@@ -26,11 +26,14 @@ typedef  struct costack_t
 
 
 
+uint32_t cst_stask_init(costack_t *task,uint32_t (*fun)(void* ),void* stack_base,uint32_t stack_size);
+uint32_t cst_yield(costack_t *task);
+uint32_t cst_task_call(costack_t *task);
 
 
-
-
-
+#include "csr_event.h"
+#include "csr_event_group.h"
+#include "csr_semaphore.h"
 
 
 

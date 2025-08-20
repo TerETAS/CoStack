@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "csr_event.h": "c",
+        "csr_semaphore.h": "c",
+        "csr_event_group.h": "c",
+        "costack.h": "c"
     }
 }
