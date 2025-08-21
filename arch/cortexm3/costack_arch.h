@@ -9,22 +9,20 @@
 #include "stdint.h"
 #include "../../costack.h"
 
-typedef struct csr_arch_save_t
+typedef struct cst_arch_save_t
 {   
-    uint32_t  r4_r11[8];
+    uint32_t  r3_r11[9];  //r3 is a pad
     uint32_t  lr; 
-    uint32_t  pad;
-}csr_arch_save_t;
+}cst_arch_save_t;
 
 
 void cst_coroutine_trampoline_wrapper(void);
 
-static void* csr_stack_init(void* sp_top){
-    void* cur_sp;
+static void* cst_init_stack_fill(void* sp_top){
+    void* cur_sp = sp_top;
 
     cur_sp-=9;
-    ((uint32_t*)cur_sp)[0]=cur_sp;
-    ((uint32_t*)cur_sp)[1]=cst_coroutine_trampoline_wrapper;
+    ((uint32_t*)cur_sp)[9]=cst_coroutine_trampoline_wrapper;
    
     return cur_sp;
 }

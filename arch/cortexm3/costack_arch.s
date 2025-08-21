@@ -26,8 +26,7 @@ cst_context_switch PROC
 
 
 cst_coroutine_trampoline_wrapper PROC
-    ldr  r1,[r0,#COSTACK_PAR_OFS]    ;get costack_t.par
-    bx   cst_coroutine_trampoline    ;go to cst_coroutine_trampoline
+    bx   cst_coroutine_trampoline    ;keep r0 and go to cst_coroutine_trampoline
     b    .                           ;unreachable
 
     ENDP

@@ -1,9 +1,10 @@
 {
     "files.associations": {
         "stdint.h": "c",
-        "csr_event.h": "c",
-        "csr_semaphore.h": "c",
-        "csr_event_group.h": "c",
+        "cst_event.h": "c",
+        "cst_semaphore.h": "c",
+        "cst_event_group.h": "c",
         "costack.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
